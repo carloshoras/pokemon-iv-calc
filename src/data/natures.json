@@ -1,0 +1,27 @@
+[
+  {
+    "id": "adamant",
+    "increased": "atk",
+    "decreased": "spAtk"
+  },
+  {
+    "id": "modest",
+    "increased": "spAtk",
+    "decreased": "atk"
+  },
+  {
+    "id": "jolly",
+    "increased": "spd",
+    "decreased": "spAtk"
+  },
+  {
+    "id": "timid",
+    "increased": "spd",
+    "decreased": "atk"
+  },
+  {
+    "id": "hardy",
+    "increased": null,
+    "decreased": null
+  }
+]

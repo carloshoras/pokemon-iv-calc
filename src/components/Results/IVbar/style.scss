@@ -1,0 +1,28 @@
+.iv-bar-wrapper {
+    background-color: var(--poke-border);
+    height: 6px;
+    border-radius: 3px;
+    width: 7vw;
+
+    .percentage-bar {
+        height: 100%;
+        border-radius: 3px;
+
+        &.iv-good {
+            background-color: #facc15; // Amarillo
+        }
+
+        &.iv-average {
+            background-color: #fb923c; // Naranja
+        }
+
+        &.iv-bad {
+            background-color: #f87171; // Rojo (ej: un IV de 0 horroroso)
+        }
+
+        &.iv-excellent {
+            background-color: var(--poke-green); // Verde brillante (ej: un IV de 31 perfecto)
+
+        }
+    }
+}

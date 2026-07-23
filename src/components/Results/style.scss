@@ -1,0 +1,52 @@
+.possible-ivs {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* width: 13vw; */
+    width: max-content;
+    column-gap: 15px;
+    align-items: center;
+
+    .stat-name {
+        color: var(--poke-muted);
+    }
+
+    // .ivs-values {
+    //     justify-self: center;
+    // }
+
+    .ivs-comment {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 2px 7px;
+        border-radius: 20px;
+        text-align: center;
+        height: fit-content;
+        width: fit-content;
+        // justify-self: center;
+
+
+        // // &.iv-excellent {
+        // //     color: var(--poke-green); // Verde brillante (ej: un IV de 31 perfecto)
+        // //     border: 1px solid rgba(74, 222, 128, 0.25);
+        // //     background: rgba(74, 222, 128, 0.12);
+        // // }
+
+        // &.iv-good {
+        //     color: #facc15; // Amarillo
+        // }
+
+        // &.iv-average {
+        //     color: #fb923c; // Naranja
+        // }
+
+        // &.iv-bad {
+        //     color: #f87171; // Rojo (ej: un IV de 0 horroroso)
+        // }
+
+        &.confirmed {
+            color: var(--poke-green); // Verde brillante (ej: un IV de 31 perfecto)
+            border: 1px solid rgba(74, 222, 128, 0.25);
+            background: rgba(74, 222, 128, 0.12);
+        }
+    }
+}

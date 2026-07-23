@@ -1,0 +1,63 @@
+.stats-inputs {
+  display: grid;
+  grid-template-columns: 9% repeat(7, 12.5%);
+  // grid-template-rows: repeat(auto-fill, 5vh);
+  justify-items: center;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  row-gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+
+  .stats-names {
+    color: var(--poke-muted);
+  }
+
+  .input-wrapper {
+    padding: 1px 10px;
+  }
+
+  .evs {
+    margin-top: -6px;
+
+    &.title {
+      align-self: end;
+      justify-self: end;
+      padding-right: 11px;
+    }
+  }
+
+  .stat-input {
+    width: 100%;
+    text-align: center;
+    cursor: text;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  .stat-input::-webkit-outer-spin-button,
+  .stat-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  .stat-input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  .remove-observation {
+    padding: 7px 15px;
+    background: transparent;
+    border: 0.5px solid var(--poke-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    color: rgb(250, 249, 245);
+
+    &:hover {
+      background: rgba(38, 38, 36, 1);
+    }
+  }
+}
