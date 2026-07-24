@@ -50,3 +50,10 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .possible-ivs {
+        grid-template-columns: auto auto;
+
+    }
+}

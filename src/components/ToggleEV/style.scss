@@ -1,4 +1,9 @@
 .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
     .switch {
         display: inline-block;
         position: relative;

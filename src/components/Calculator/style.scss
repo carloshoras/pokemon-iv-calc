@@ -44,25 +44,6 @@
         margin-top: 20px;
         height: 4.3vh;
 
-        .add-observation {
-            width: max-content;
-            color: var(--poke-muted);
-            background-color: var(--poke-panel);
-            border: 1px dashed var(--poke-muted);
-            display: flex;
-            align-items: center;
-            border-radius: 6px;
-            cursor: pointer;
-
-            span {
-                font-size: clamp(1.5rem, 4vw, 2.5rem);
-            }
-
-            &:hover {
-                border-color: var(--poke-blue);
-                color: var(--poke-blue);
-            }
-        }
 
 
         .calculate-ivs {
@@ -99,6 +80,34 @@
         }
     }
 
+    .upper-buttons-row {
+        display: flex;
+        justify-content: space-between;
+        height: 4.3vh;
+        margin-bottom: 12px;
+
+        .add-observation {
+            width: max-content;
+            color: var(--poke-muted);
+            background-color: var(--poke-panel);
+            border: 1px dashed var(--poke-muted);
+            display: flex;
+            align-items: center;
+            border-radius: 6px;
+            cursor: pointer;
+
+            span {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+
+            &:hover {
+                border-color: var(--poke-blue);
+                color: var(--poke-blue);
+            }
+        }
+
+    }
+
     .results {
         display: flex;
         gap: 40px;
@@ -133,6 +142,10 @@
 
         .first-row {
             flex-direction: column;
+        }
+
+        .results {
+            gap: 12px;
         }
     }
 }

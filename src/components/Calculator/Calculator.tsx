@@ -80,7 +80,15 @@ export default function Calculator({ allPokemons }: Props) {
           )}
         </div>
         <div className='observation-row card'>
-          <hr />
+          <div className="upper-buttons-row">
+            <button
+              type="button"
+              className="add-observation"
+              onClick={() => addObservation()}>
+              <span>+</span> Add Level
+            </button>
+            <ToggleEV showEVs={showEVs} setShowEVs={setShowEVs} />
+          </div>
           <StatsInputs
             observations={observations}
             handleObservationStatChange={handleObservationStatChange}
@@ -89,14 +97,6 @@ export default function Calculator({ allPokemons }: Props) {
             showEVs={showEVs}
             handleObservationEVChange={handleObservationEVChange} />
           <div className='buttons-row'>
-
-            <button
-              type="button"
-              className="add-observation"
-              onClick={() => addObservation()}>
-              <span>+</span> Add Level
-            </button>
-            <ToggleEV showEVs={showEVs} setShowEVs={setShowEVs} />
             <button
               type="submit"
               className="calculate-ivs">

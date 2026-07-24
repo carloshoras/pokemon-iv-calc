@@ -5,6 +5,7 @@ import StatInput from './StatInput';
 import { Observation, StatKey } from '@/types/calculator';
 import React from "react";
 import TrashIcon from "../icons/TrashIcon";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface Props {
     observations: Observation[],
@@ -17,10 +18,15 @@ interface Props {
 
 export default function StatsInputs({ observations, handleObservationLevelChange, handleObservationStatChange, removeObservation, showEVs, handleObservationEVChange }: Props) {
     console.log("rendering StatsInputs with observations: ", observations)
+    const isMobile = useIsMobile();
+
+    const statLabels = isMobile
+        ? ["Level", "HP", "Atk", "Def", "Sp.A", "Sp.D", "Spd", ""]
+        : ["Level", "HP", "Atk", "Def", "Sp. Atk", "Sp. Def", "Spd", ""];
 
     return (
         <div className='stats-inputs'>
-            {["Level", "HP", "Atk", "Def", "Sp. Atk", "Sp. Def", "Spd", ""].map((statName) => (
+            {statLabels.map((statName) => (
                 <span key={statName} className="stats-names">
                     {statName}
                 </span>))}
