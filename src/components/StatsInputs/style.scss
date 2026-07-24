@@ -32,6 +32,7 @@
     width: 100%;
     text-align: center;
     cursor: text;
+    font-size: 1.2rem;
   }
 
   /* Chrome, Safari, Edge, Opera */
@@ -58,6 +59,27 @@
 
     &:hover {
       background: rgba(38, 38, 36, 1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-inputs {
+    grid-template-columns: 11% repeat(6, 12.5%) 6%;
+    justify-content: space-around;
+
+    .stats-names {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .input-wrapper {
+      padding: 1px 0px;
+      margin: 0;
+
+      .stat-input {
+        font-size: 1rem;
+      }
     }
   }
 }

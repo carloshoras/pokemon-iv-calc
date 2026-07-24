@@ -15,7 +15,7 @@
     // }
 
     .ivs-comment {
-        font-size: 0.7rem;
+        font-size: clamp(0.7rem, 2.5vw, 1.2rem);
         font-weight: 600;
         padding: 2px 7px;
         border-radius: 20px;

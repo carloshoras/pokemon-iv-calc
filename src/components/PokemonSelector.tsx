@@ -95,7 +95,8 @@ export default function PokemonSelector({ filteredPokemons, selectedPokemon, onC
         options={pokemonOptions}
         value={currentValue}
         onChange={handleChange}
-        styles={selectStyles} />
+        styles={selectStyles}
+        className="input-pokemon-selector" />
       {/* <select
         className='input-pokemon-selector'
         id="pokemon-select"

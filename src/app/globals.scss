@@ -126,6 +126,12 @@ h6 {
   padding: 15px 17px;
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: 15px 4px;
+  }
+}
+
 .input-pokemon-selector {
   background-color: var(--poke-input-bg);
   border: 1px solid var(--poke-border);
@@ -133,6 +139,7 @@ h6 {
   padding: 5px;
   cursor: pointer;
   color: inherit;
+  font-size: clamp(1rem, 1.2rem, 1.4rem);
 
   &:focus {
     border-color: var(--poke-blue);
