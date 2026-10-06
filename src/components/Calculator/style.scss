@@ -95,9 +95,10 @@
             align-items: center;
             border-radius: 6px;
             cursor: pointer;
+            font-size: 1.3rem;
 
             span {
-                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                font-size: 2rem;
             }
 
             &:hover {
@@ -108,30 +109,40 @@
 
     }
 
-    .results {
-        display: flex;
-        gap: 40px;
-
-        .image-pokemon {
-            background-color: var(--poke-input-bg);
-            border: 1px solid var(--poke-border);
-            border-radius: 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-
-            .pokemon-name {
-                font-family: var(--font-press-start-2p), monospace;
-                font-size: clamp(0.6rem, 2vw, 1rem);
-                color: var(--poke-yellow);
-                text-align: center;
-            }
+    .results-row {
+        .results-title {
+            font-family: var(--font-press-start-2p), monospace;
+            color: var(--poke-yellow);
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
+        .results {
+            display: flex;
+            // gap: 40px;
+
+            .image-pokemon {
+                background-color: var(--poke-input-bg);
+                border: 1px solid var(--poke-border);
+                border-radius: 14px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+
+                .pokemon-name {
+                    font-family: var(--font-press-start-2p), monospace;
+                    font-size: clamp(0.6rem, 2vw, 1rem);
+                    color: var(--poke-yellow);
+                    text-align: center;
+                }
+            }
 
 
+
+        }
     }
 }
 
@@ -142,6 +153,16 @@
 
         .first-row {
             flex-direction: column;
+        }
+
+        .upper-buttons-row {
+            .add-observation {
+                font-size: 1rem;
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
         }
 
         .results {

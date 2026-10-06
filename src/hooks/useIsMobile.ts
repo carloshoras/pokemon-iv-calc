@@ -5,23 +5,23 @@ import { useState, useEffect } from 'react';
  * Updates on window resize
  */
 export const useIsMobile = (breakpoint: number = 768) => {
-  const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
 
-  useEffect(() => {
-    // Check on mount
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= breakpoint);
-    };
+    useEffect(() => {
+        // Check on mount
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= breakpoint);
+        };
 
-    handleResize();
+        handleResize();
 
-    // Listen for resize events
-    window.addEventListener('resize', handleResize);
+        // Listen for resize events
+        window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [breakpoint]);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [breakpoint]);
 
-  return isMobile;
+    return isMobile;
 };

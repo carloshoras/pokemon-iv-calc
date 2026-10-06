@@ -104,17 +104,24 @@ export default function Calculator({ allPokemons }: Props) {
             </button>
           </div>
         </div>
-        <div className='results card'>
-          {userInputData.pokemonId && (
-            <div className='image-pokemon'>
-              <img
-                src={selectedPokemon?.spriteUrl}
-                width={150} />
-              <span className='pokemon-name'>{selectedPokemon?.displayName}</span>
-            </div>
-          )}
+        <div className='results-row card'>
+          <h2 className='results-title'>Results</h2>
+          <div className='results'>
+            {userInputData.pokemonId && (
+              <div className='image-pokemon'>
+                <img
+                  src={selectedPokemon?.spriteUrl}
+                  width={150} />
+                <span className='pokemon-name'>{selectedPokemon?.displayName}</span>
+              </div>
+            )}
 
-          <Results results={results} />
+            {results && Object.keys(results).length > 0 ? (
+              <Results results={results} />
+            ) : (
+              <p>No results yet. Please input your observations and click "Calculate IVs".</p>
+            )}
+          </div>
         </div>
       </form>
     </>

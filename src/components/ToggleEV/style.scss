@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
+    font-size: 1.3rem;
 
     .switch {
         display: inline-block;
@@ -65,5 +66,11 @@
         &.active {
             color: var(--poke-blue);
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle-container {
+        font-size: 1rem;
     }
 }

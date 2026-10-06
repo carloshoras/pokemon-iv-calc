@@ -26,14 +26,14 @@ const initialObservation: Observation = {
     id: Date.now().toString()
 };
 
-const initialResults: IVResults = {
-    hp: [],
-    atk: [],
-    def: [],
-    spAtk: [],
-    spDef: [],
-    spd: [],
-};
+// const initialResults: IVResults = {
+//     hp: [],
+//     atk: [],
+//     def: [],
+//     spAtk: [],
+//     spDef: [],
+//     spd: [],
+// };
 
 const initialInputData: UserInputData = {
     genEra: "MODERN",
@@ -45,7 +45,7 @@ const initialInputData: UserInputData = {
 export function useCalculatorSession() {
     const [observations, setObservations] = useState<Observation[]>([initialObservation]);
     const [userInputData, setUserInputData] = useState<UserInputData>(initialInputData);
-    const [results, setResults] = useState<IVResults>(initialResults);
+    const [results, setResults] = useState<IVResults | null>(null);
 
     const handleSubmit = (selectedPokemon: PokemonEntry) => {
         // Auxiliar updatedUserInputData with new stats/ev's introduced by the user

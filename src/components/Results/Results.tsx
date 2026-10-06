@@ -2,6 +2,7 @@ import { IVResults } from "@/types/calculator";
 import { getIVGradeClass } from "@/utils/ivDisplay";
 import React from "react";
 import IVbar from "./IVbar/IVbar";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import "./style.scss"
 
 interface ResultsProps {
@@ -9,6 +10,7 @@ interface ResultsProps {
 }
 
 export default function Results({ results }: ResultsProps) {
+    const isMobile = useIsMobile();
 
     return (
         <div className='possible-ivs'>
@@ -20,17 +22,19 @@ export default function Results({ results }: ResultsProps) {
                 return (
                     <React.Fragment key={stat} >
                         <span className='stat-name'>{stat.toUpperCase()}</span>
-                        <IVbar possibleIVs={possibleIVsList} />
+                        {!isMobile && <IVbar possibleIVs={possibleIVsList} />}
                         {/* <span>{getIVBarPercentage(possibleIVsList)}</span> */}
                         <span className='ivs-values'>
                             {possibleIVsList.join(", ")}
                         </span>
-                        {isIVConfirmed ? (
-                            <div className='ivs-comment'>
-                                <span className={`ivs-comment ${statusClass} confirmed`}>Confirmed</span>
-                            </div>
-                        ) : (
-                            <span className='ivs-comment'>Not confirmed</span>
+                        {!isMobile && (
+                            isIVConfirmed ? (
+                                <div className='ivs-comment'>
+                                    <span className={`ivs-comment ${statusClass} confirmed`}>Confirmed</span>
+                                </div>
+                            ) : (
+                                <span className='ivs-comment'>Not confirmed</span>
+                            )
                         )}
                     </React.Fragment>
                 )

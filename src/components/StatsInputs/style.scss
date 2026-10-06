@@ -5,13 +5,14 @@
   justify-items: center;
   justify-items: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   row-gap: 12px;
   max-height: 300px;
   overflow-y: auto;
 
   .stats-names {
     color: var(--poke-muted);
+    font-size: 1.3rem;
   }
 
   .input-wrapper {
@@ -28,6 +29,7 @@
       align-self: end;
       justify-self: end;
       padding-right: 11px;
+      font-size: 1.3rem;
     }
   }
 
@@ -41,7 +43,7 @@
     width: 100%;
     text-align: center;
     cursor: text;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   /* Chrome, Safari, Edge, Opera */
@@ -66,6 +68,11 @@
     transition: background 0.15s, transform 0.1s;
     color: rgb(250, 249, 245);
 
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+
     &:hover {
       background: rgba(38, 38, 36, 1);
     }
@@ -83,7 +90,7 @@
 @media (max-width: 768px) {
   .stats-inputs {
     grid-template-columns: 11% repeat(6, 12.5%) 6%;
-    justify-content: space-around;
+    // justify-content: space-around;
 
     .stats-names {
       font-size: 1rem;
